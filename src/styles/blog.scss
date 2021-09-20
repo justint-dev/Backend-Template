@@ -1,0 +1,117 @@
+@import './../styles/shared.scss';
+
+.blog-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .table-blog{
+        width: 100%;
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            
+            thead{
+                th{
+                    border: 1px solid white;
+                }
+
+                th:nth-child(1),
+                th:nth-child(2),
+                th:nth-child(3){
+                    border-width: 0px 2px 2px 0px;
+                }
+
+                th:nth-child(4){
+                    border-width: 0px 0px 2px 0px;
+                }
+            }
+
+            tbody{
+                td{
+                    border: 1px solid white;
+                    padding: 1vh;
+                    text-align: center;
+                }
+
+                td:nth-child(1),
+                td:nth-child(2),
+                td:nth-child(3){
+                    border-width: 0px 2px 2px 0px;
+                }
+
+                td:nth-child(4){
+                    width: 32.5%;
+                    border-width: 0px 0px 2px 0px;
+                }
+            }
+        }
+    }
+
+    .form-blog{
+        width: 100%;
+
+        .form-head{
+            width: 100%;
+            border: 1px solid white;
+            border-width: 0px 0px 1px 0px;
+            padding-bottom: .5vh;
+        }
+
+        .form-item{
+            margin-top: 2.5vh;
+
+            input,
+            select,
+            textarea{
+                margin-top: 1vh;
+
+                &::-webkit-calendar-picker-indicator {
+                    filter: invert(1);
+                }
+            }
+
+            p{
+                float: left;
+                width: 60%;
+                text-align: right;
+                white-space: pre-wrap;
+            }
+
+            p:nth-child(2){
+                width: 37%;
+                margin-left: 3%;
+                text-align: left;
+            }
+        }
+
+        .form-buttons{
+            width: 100%;
+            margin-top: 2.5vh;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .blog-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .blog-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "compile-hero.disable-compile-files-on-did-save-code": true,
+  "files.exclude": {
+    "README.md": true,
+    "node_modules": true,
+    ".vscode": true,
+    "public\\.htaccess": true,
+    "public\\robots.txt": true,
+    "public\\manifest.json": true,
+    "public\\logo512.png": true,
+    "public\\logo192.png": true,
+    "public\\index.html": true
+  }
+}

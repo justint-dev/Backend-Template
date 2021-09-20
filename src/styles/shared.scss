@@ -1,0 +1,175 @@
+/*Vars*/
+$dark: #1b262c;
+$ui-light: rgba(57, 68, 84, 0.5);
+$color-main: rgba(23, 29, 38, 1);
+$dark-blue: #0f4c75;
+$blue: #3283b8;
+$light-blue: #bbe1fa;
+
+/*Standards*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body, html{
+    width: calc(100vw - (100vw - 100%));
+    min-height: 100vh;
+    background-color: $dark;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.clear{
+    clear: both;
+}
+/*Elements*/
+.content-wrapper{
+    width: 82.5%;
+    float: right;
+    padding: 5vh 4vw 5vh 4vw;
+    box-sizing: border-box;
+}
+
+.input{
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    background-color: rgba(66, 77, 93, 1);
+    border: 1px solid transparent;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    font-family: "Ruda", sans-serif;
+    font-weight: 400;
+    transition: border .3s ease-in, caret-color .3s ease-in;
+
+    &:hover,
+    &:focus{
+    border: 1px solid $blue;
+    caret-color: $blue;
+}
+}
+
+.ui-container{
+    width: 40%;
+
+    .ui-header{
+        width: fit-content;
+        padding: 2vh 3vw .5vh 3vw;
+        background-color: $color-main;
+        border: 0px solid $dark-blue;
+        border-radius: 25px 25px 0px 0px;
+        transition: background .3s ease-in;
+
+        &:hover{
+            cursor: pointer;
+            background-color: $blue;
+        
+            &.deactivated{
+                cursor: default;
+                background-color: $color-main;
+            }
+        }
+    }
+
+    .ui-wrapper{
+        border-radius: 0px 25px 25px 25px;
+        overflow: hidden;
+
+        .ui-content{
+            width: 100%;
+            max-height: 84vh;
+            padding: 3vh;
+            box-sizing: border-box;
+            background-color: $ui-light;
+            border: 0px solid transparent;
+            overflow-y: auto;
+    
+            &::-webkit-scrollbar{
+                width: 5px;
+                height: 5px;
+                background-color: transparent;
+            }
+    
+            &::-webkit-scrollbar-thumb{
+                background: $blue;
+            }
+        }
+    }
+}
+
+.btn-main{
+    padding: 12px 54px;
+    background-color: $color-main;
+    color: white;
+    font-family: "Ruda", sans-serif;
+    font-size: 18px;
+    border: 0px;
+    outline: none;
+    transition: background .3s ease-in;
+
+    &:hover{
+        cursor: pointer;
+        background-color: $blue;
+    }
+}
+
+/*Texts*/
+.headline-small{
+    color: white;
+    font-size: 26px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+}
+
+.text-normal{
+    color: white;
+    font-size: 18px;
+    font-family: "Ruda", sans-serif;
+    font-weight: 400;
+}
+
+.text-big{
+    color: white;
+    font-size: 20px;
+    font-family: "Ruda", sans-serif;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 767px){
+    .content-wrapper{
+        width: 95%;
+        padding: 5vh 0vw 5vh 0vw;
+    }
+
+    .ui-container{
+        width: 85%;
+    }
+
+    .ui-container ~ .ui-container{
+        margin-top: 5vh
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .content-wrapper{
+        width: 95%;
+        padding: 5vh 0vw 5vh 0vw;
+    }
+
+    .ui-container{
+        width: 85%;
+    }
+
+    .ui-container ~ .ui-container{
+        margin-top: 5vh
+    }
+}

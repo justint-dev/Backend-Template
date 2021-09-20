@@ -1,0 +1,133 @@
+@import './../styles/shared.scss';
+
+/*Dashboard*/
+.dashboard{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .stats-section{
+        width: 100%;
+
+        .stats-head{
+            width: 100%;
+            border: 1px solid white;
+            border-width: 0px 0px 1px 0px;
+            padding-bottom: .5vh;
+        }
+
+        .stats-item{
+            width: 100%;
+            margin-top: .5vh;
+
+            p{
+                float: left;
+                width: 60%;
+                text-align: right;
+                white-space: pre-wrap;
+            }
+
+            p:nth-child(2){
+                width: 37%;
+                margin-left: 3%;
+                text-align: left;
+            }
+        }
+
+        .stats-item:nth-child(2){
+            margin-top: 1.5vh;
+        }
+    }
+
+    .stats-section ~ .stats-section{
+        margin-top: 2vh;
+    }
+
+    /*Settings*/
+    .settings-section{
+        width: 100%;
+
+        .settings-head{
+            width: 100%;
+            border: 1px solid white;
+            border-width: 0px 0px 1px 0px;
+            padding-bottom: .5vh;
+        }
+
+        .settings-item{
+            margin-top: 2.5vh;
+
+            input{
+                margin-top: 1vh;
+            }
+        }
+
+        &.db{
+            .settings-item:nth-child(3),
+            .settings-item:nth-child(4){
+                width: 47.5%;
+                float: left;
+            }
+
+            .settings-item:nth-child(4){
+                margin-left: 5%;
+            }
+        }
+    }
+
+    .settings-section ~ .settings-section{
+        margin-top: 4vh;
+    }
+
+    .form-buttons{
+        width: 100%;
+        margin-top: 2.5vh;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.error{
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 767px){
+    .dashboard{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .settings-section{
+            &.db{
+                .settings-item:nth-child(3),
+                .settings-item:nth-child(4){
+                    width: 100%;
+                    float: none;
+                }
+
+                .settings-item:nth-child(4){
+                    margin-left: 0%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .dashboard{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
