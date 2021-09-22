@@ -33,26 +33,31 @@
 
     $statement = $pdo->prepare($query1);
     if(!$statement->execute()){
+        $pdo = null;
         die("200");
     }
 
     $statement = $pdo->prepare($query2);
     if(!$statement->execute()){
+        $pdo = null;
         die("200");
     }
 
     $statement = $pdo->prepare($query3);
     if(!$statement->execute()){
+        $pdo = null;
         die("200");
     }
 
     $statement = $pdo->prepare($query4);
     if(!$statement->execute()){
+        $pdo = null;
         die("200");
     }
 
     $statement = $pdo->prepare($query5);
     if(!$statement->execute()){
+        $pdo = null;
         die("200");
     }
 

@@ -7,7 +7,8 @@
     if($statement->execute(array($_POST["group"], $_POST["id"]))){
         echo "100";
     }else{
-        print_r($pdo->errorInfo());
+        $pdo = null;
+        die("200");
     }
 
     $pdo = null;

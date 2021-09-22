@@ -11,11 +11,13 @@
         if($statement->execute(array($_POST["itemnumber"], $_POST["name"], $_POST["description"], $_POST["price"], $imgLink))){
             echo "100";
         }else{
-            echo "200";
+            $pdo = null;
+            die("200");
         }
 
         $pdo = null;
     }else{
-        echo "200";
+        $pdo = null;
+        die("200");
     }
 ?>

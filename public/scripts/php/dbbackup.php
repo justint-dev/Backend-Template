@@ -44,6 +44,7 @@
             }
 
             if(!fwrite($handle, $csv)){
+                fclose($handle);
                 die("200");
             }
 

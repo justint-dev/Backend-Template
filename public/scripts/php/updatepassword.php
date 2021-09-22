@@ -7,7 +7,8 @@
     if($statement->execute(array(password_hash($_POST["password"], PASSWORD_DEFAULT), $_POST["username"]))){
         echo "100";
     }else{
-        echo "200";
+        $pdo = null;
+        die("200");
     }
 
     $pdo = null;

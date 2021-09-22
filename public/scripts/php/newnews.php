@@ -13,6 +13,7 @@
     $handle = fopen(('../../news/'.$obj->id.'####'.$obj->title.'####'.$obj->date.'.json'), "w");
 
     if(!fwrite($handle, $json)){
+        fclose($handle);
         die("200");
     }
 

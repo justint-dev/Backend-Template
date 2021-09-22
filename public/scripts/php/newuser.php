@@ -7,7 +7,8 @@
     if($statement->execute(array($_POST["username"], password_hash("newpw21$.", PASSWORD_DEFAULT), $_POST["usergroup"]))){
         echo "100";
     }else{
-        echo "200";
+        $pdo = null;
+        die("200");
     }
 
     $pdo = null;

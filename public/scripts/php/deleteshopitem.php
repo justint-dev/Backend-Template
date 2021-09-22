@@ -9,7 +9,8 @@
     if($statement->rowCount() == 1){
         echo "100";
     }else{
-        echo "200";
+        $pdo = null;
+        die("200");
     }
 
     $pdo = null;

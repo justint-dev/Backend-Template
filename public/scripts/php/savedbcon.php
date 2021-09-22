@@ -8,6 +8,7 @@
     $handle = fopen('../../settings/settings_db.json', 'w');
 
     if(!fwrite($handle, $json)){
+        fclose($handle);
         die("200");
     }
 

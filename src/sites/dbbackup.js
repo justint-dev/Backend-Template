@@ -127,8 +127,7 @@ class BackupTableRow extends React.Component{
         if(data === "100"){
             alert("The backup was loaded.");
         }else{
-            console.log(data);
-            //alert("Something went wrong.");
+            alert("Something went wrong.");
         }
     }
 

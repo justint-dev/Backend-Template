@@ -17,7 +17,8 @@
                     echo "500"; //reset password
                 }
             }else{
-                echo "200";
+                $pdo = null;
+                die("200");
             }
         }
     }

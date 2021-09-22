@@ -91,7 +91,7 @@ class LoginForm extends React.Component{
     }
 
     async forgotPassword(){
-        alert("Implement send email to server.");
+        //Implement Project specific
     }
 
     render(){

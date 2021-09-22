@@ -14,6 +14,7 @@
                 echo $row["Username"] . "#" . $row["Usergroup"];
             }
         }else{
+            $pdo = null;
             die("200");
         }
 

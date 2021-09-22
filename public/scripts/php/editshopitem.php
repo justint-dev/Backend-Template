@@ -7,7 +7,8 @@
     if($statement->execute(array($_POST["itemnumber"], $_POST["name"], $_POST["price"], $_POST["oldItemnumber"]))){
         echo "100";
     }else{
-        echo "200";
+        $pdo = null;
+        die("200");
     }
 
     $pdo = null;
